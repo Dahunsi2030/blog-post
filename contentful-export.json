@@ -1,0 +1,1280 @@
+{
+  "tags": [
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zy8f8bsjp0gq"
+          }
+        },
+        "id": "6GM6xSAMjZZACslnAZHxUF",
+        "type": "Entry",
+        "createdAt": "2022-04-19T14:23:10.116Z",
+        "updatedAt": "2022-04-21T15:51:26.873Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 24,
+        "publishedAt": "2022-04-21T15:51:26.873Z",
+        "firstPublishedAt": "2022-04-19T14:44:25.791Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "27ofh3bvr6omGMJDrSv60L"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "27ofh3bvr6omGMJDrSv60L"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 25,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "27ofh3bvr6omGMJDrSv60L"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogPost"
+          }
+        }
+      },
+      "fields": {
+        "postTitle": {
+          "en-US": "Simple Way to Use Contentful app using Node"
+        },
+        "body": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Introduction",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-2"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "The GraphQL Content API provides a GraphQL API interface to the content from Contentful. Each Contentful space comes with a GraphQL schema based on its content model. This GraphQL schema is generated at request time and is always up-to-date with the current status of the space.You can use this API to consume both published and non-published content. Read more about this in the ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://www.contentful.com/developers/docs/references/graphql/#/introduction/previewing-content"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "previewing content section",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": ".",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Basic API information",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-2"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "API Base URL ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "https://graphql.contentful.com",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "This is a read-only API",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Basic API Information",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "The Contentful GraphQL Content API is available at:https://graphql.contentful.com/content/v1/spaces/{SPACE}It is also available for specific ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://www.contentful.com/developers/docs/concepts/multiple-environments/"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "environments",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " at:https://graphql.contentful.com/content/v1/spaces/{SPACE}/environments/{ENVIRONMENT}",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "Disclaimer",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": ": GraphQL Content API is available on all spaces for customers on ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://www.contentful.com/pricing/"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "current pricing plans",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": ". If you are on a legacy plan, contact ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://www.contentful.com/support/"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Customer Support",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " to upgrade.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "HTTP Methods",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "The GraphQL Content API supports both GET and POST methods.This is the query used in both examples below:",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "query",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "($preview: Boolean){\n  blogCollection(preview:$preview){\n    items{\n      title\n    }\n  }\n}",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "POST",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "The HTTPS POST method is more flexible and recommended. The query should be sent as a property in a JSON payload in the body of the POST request with the property name \"query\". Any required variables are added as an additional JSON property to the payload with the property name \"variables\".curl -g \\\n-XPOST \\\n-H\"Content-Type: application/json\" \\\n-H\"Authorization: Bearer {TOKEN}\" \\\n-d  '{\"query\":\"query($preview:Boolean){blogCollection(preview:$preview){items{title}}}\",\"variables\":{\"preview\":true}}' \\\nhttps://graphql.contentful.com/content/v1/spaces/{SPACE}/environments/{ENVIRONMENT}",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "GET",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "The HTTPS GET method requires that the query is included in the URL string as a parameter. You can also send any required variables in an additional \"variables\" parameter in JSON format.curl -g \\\n-X GET \\\n-H \"Content-Type: application/json\" \\\n-H \"Authorization: Bearer {TOKEN}\" \\\n'https://graphql.contentful.com/content/v1/spaces/{SPACE}/environments/{ENVIRONMENT}?query=query($preview:Boolean){blogCollection(preview:$preview){items{title}}}&variables={\"preview\":true}'",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Authentication",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Any client using the API needs to provide an access token in either:",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "The ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "code"
+                              }
+                            ],
+                            "value": "Authorization",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " header, specifically, ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "code"
+                              }
+                            ],
+                            "value": "Authorization: Bearer MY_TOKEN",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": ".",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "The ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "code"
+                              }
+                            ],
+                            "value": "access_token",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " URL query parameter.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "The token must have access to the space and environment you're targeting. For example, if you create an access token that only has access to the ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "master",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " environment of your space, you cannot use that token to access content from any other environment or space.To learn more about authentication in Contentful and how to create your own access tokens take a look at the ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://www.contentful.com/developers/docs/references/authentication/"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Authentication reference documentation",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": ".",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "API rate limits",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "API Rate limits specify the number of requests a client can make to Contentful APIs in a specific time frame. Every request counts against a per-second rate limit.There are no limits enforced on requests that hit our CDN cache, i.e. the request doesn't count towards your rate limit and you can make an unlimited amount of cache hits. For requests that do hit the GraphQL Content API enforces rate limits of ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "55",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " requests per second. Higher rate limits may apply depending on your current plan.When a client gets rate limited, the API responds with the ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "429 Too Many Requests",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " HTTP status code and sets the ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "X-Contentful-RateLimit-Reset",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " header that tells the client when it can make its next single request. The value of this header is an integer specifying the time before the limit resets and another request will be accepted. As the client is rate-limited per second, the header will return 1, which means the next second.",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "Example",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "The current rate limit for a client is the default 55 per second. Client: 85 uncached requests in 1 secondHTTP/1.1429X-Contentful-RateLimit-Reset:1Meaning: wait 1 second before making more requests.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Query complexity limits",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Query complexity limits specify the amount of data a client can request from the GraphQL Content API in one request. The complexity is calculated as the maximum number of entries and assets a query can potentially return. You can currently request up to ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "11000",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " entities in one request.",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "Example 1query",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " {\n  lessonCollection(limit:20) {\n    items {\n      title\n    }\n  }\n}The query above can return up to 20 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "Lessons",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": ". The query complexity is 20.",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "Example 2query",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " {\n  lessonCollection(limit:20) {\n    items {\n      title\n      imageCollection(limit:10) {\n        title\n        url\n      }\n    }\n  }\n}The query above can return up to 20 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "Lessons",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " and up to 200 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "Assets",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " (up to 10 for each of 20 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "Lessons",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "). The query complexity is 220.",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "Example 3query",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " {\n  lessonCollection(limit:20) {\n    items {\n      title\n      participantsCollection (limit:10) {\n        ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "...on",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " Person {\n          name\n          imageCollection(limit:3) {\n            title\n            url\n          }\n        }\n        ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "...on",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " Pet {\n          name\n          imageCollection(limit:5) {\n            title\n            url\n          }\n        }\n      }\n    }\n  }\n}",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "The query above can return up to 20 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "Lessons",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": ", up to 200 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "Participants",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " (up to 10 for each of 20 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "Lessons",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": ") and up to 1000 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "Assets",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " (up to 5 for each of 200 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "Participants",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "). The query complexity is 1220.Parameters such as locale, preview, sorting, filtering or image transformations do not change query complexity.The API sets the ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "X-Contentful-Graphql-Query-Cost",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " response header to the calculated query complexity value.When a client gets query complexity limited, the API responds with a ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "TOO_COMPLEX_QUERY",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " error.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Rich Text",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Rich Text fields work similarly when calculating complexity but have some special behaviour. The complexity of the ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "links",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " property in a ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "RichText",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " field is equal to the sum of the maximum number of allowed linked entries and assets in the validation settings for the field.In the following example the ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "value": "richText",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " field is configured with a maximum limit of 5 embedded inline entries and a maximum of 0 of all other types of embedded entries or assets:",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "Example",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "profilePicture": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1agJuQj0GopiPxV8KhzBM6"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zy8f8bsjp0gq"
+          }
+        },
+        "id": "1agJuQj0GopiPxV8KhzBM6",
+        "type": "Asset",
+        "createdAt": "2022-04-21T15:49:58.277Z",
+        "updatedAt": "2022-04-21T15:50:34.089Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2022-04-21T15:50:34.089Z",
+        "firstPublishedAt": "2022-04-21T15:50:34.089Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "27ofh3bvr6omGMJDrSv60L"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "27ofh3bvr6omGMJDrSv60L"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "27ofh3bvr6omGMJDrSv60L"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "6svn6onmn0gufdp01utt"
+        },
+        "description": {
+          "en-US": "GraphQL page"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zy8f8bsjp0gq/1agJuQj0GopiPxV8KhzBM6/2ba1c5df36b2f96eeb5d8a082286e09e/6svn6onmn0gufdp01utt.jpg",
+            "details": {
+              "size": 63153,
+              "image": {
+                "width": 1600,
+                "height": 900
+              }
+            },
+            "fileName": "6svn6onmn0gufdp01utt.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ]
+}
